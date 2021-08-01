@@ -1,0 +1,24 @@
+{
+    "name": "pbrilius/c2c-mvc.pbgroupeu",
+    "description": "A small footprint TDD - FDD impacted communication on MVC - ORM",
+    "type": "project",
+    "require": {
+        "doctrine/orm": "3.0.x-dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5.x-dev"
+    },
+    "license": "EULA",
+    "autoload": {
+        "psr-4": {
+            "Pbrilius\\C2cMvcPbgroupeu\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Povilas Brilius",
+            "email": "pbrilius@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}

@@ -10,7 +10,8 @@
         "league/plates": "@stable",
         "league/route": "@stable",
         "league/uri": "^6.0",
-        "league/uri-components": "2.x-dev"
+        "league/uri-components": "2.x-dev",
+        "symfony/cache": "5.4.x-dev"
     },
     "require-dev": {
         "phpunit/phpunit": "9.5.x-dev"

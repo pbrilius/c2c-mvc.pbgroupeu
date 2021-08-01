@@ -21,6 +21,9 @@ $eniac = new Configuration([
         'path' => Expect::string()->assert(function ($path) { return \is_writeable($path); })->required(),
         'file' => Expect::string()->required(),
     ]),
+    'doctrine' => Expect::structure([
+      'proxy' => Expect::string()->assert(function ($path) { return \is_writable($path); })->required(),
+    ]),
 ]);
 
 // Set the values somewhere
@@ -34,9 +37,12 @@ $userProvidedValues = [
         'password' => 'èóíßù5íWêïË4458é',
     ],
     'logging' => [
-        'path' => __DIR__ . '/../log',
+        'path' => __DIR__ . '/../log/',
         'file' => 'app.log',
         'enabled' => (bool) $_SERVER['DEBUG'],
+    ],
+    'doctrine' => [
+      'proxy' => $_ENV['PROXY'],
     ],
 ];
 

@@ -6,12 +6,12 @@ use Doctrine\ORM\EntityManager;
 require_once "vendor/autoload.php";
 require_once __DIR__ . '/config/eniac.php';
 
-$isDevMode = true;
-$proxyDir = null;
+$isDevMode = (bool) $_ENV['DEBUG'];
+$proxyDir = $eniac->get('doctrine.proxy');
 $cache = null;
 $useSimpleAnnotationReader = false;
 $config = Setup::createXMLMetadataConfiguration(array(__DIR__."/config/xml"),
- $isDevMode, $isDevMode, $proxyDir, $cache);
+ $isDevMode, $proxyDir, $cache);
 
 $dbParams = array(
     'driver'   => $eniac->get('database.driver'),

@@ -24,6 +24,12 @@ $eniac = new Configuration([
     'doctrine' => Expect::structure([
       'proxy' => Expect::string()->assert(function ($path) { return \is_writable($path); })->required(),
     ]),
+    'api' => Expect::structure([
+      'version' => Expect::int()->min(1)->max(256),
+    ]),
+    'app' => Expect::structure([
+      'label' => Expect::string()->required(),
+    ]),
 ]);
 
 // Set the values somewhere
@@ -43,6 +49,12 @@ $userProvidedValues = [
     ],
     'doctrine' => [
       'proxy' => __DIR__ . '/../' .  $_ENV['PROXY'],
+    ],
+    'api' => [
+      'version' => (int) $_SERVER['VERSION'],
+    ],
+    'app' => [
+      'label' => $_SERVER['LABEL'],
     ],
 ];
 

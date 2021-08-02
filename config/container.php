@@ -13,3 +13,7 @@ $container->add(EntityManagerInterface::class, $entityManager)->addTag('doctrine
 include_once __DIR__ . '/../monolog.php';
 use Monolog\Logger;
 $container->add(Logger::class, $logger)->addTag('logger');
+
+include_once __DIR__ . '/../engine.php';
+use League\Templates\Engine;
+$container->add(Engine::class, $templates)->addTag('engine');

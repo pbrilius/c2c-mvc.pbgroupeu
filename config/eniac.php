@@ -32,9 +32,9 @@ $userProvidedValues = [
         'driver' => 'pdo_mysql',
         'port' => 3306,
         'host' => 'localhost',
-        'database' => 'getloan_com',
-        'username' => 'getloan_doctrine',
-        'password' => 'èóíßù5íWêïË4458é',
+        'database' => $_SERVER['DATABASE'],
+        'username' => $_SERVER['USERNAME'],
+        'password' => $_SERVER['PASSWORD'],
     ],
     'logging' => [
         'path' => __DIR__ . '/../log/',

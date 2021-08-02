@@ -52,5 +52,5 @@ $eniac->merge($userProvidedValues);
 // Read the values and do stuff with them
 if ($eniac->get('logging.enabled')) {
     file_put_contents($eniac->get('logging.path') . $eniac->get('logging.file'),
-     'Connecting to the database on ' . $eniac->get('database.host'));
+     'Connecting to the database on ' . $eniac->get('database.host') . "\n", FILE_APPEND);
 }

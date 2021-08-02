@@ -8,4 +8,4 @@ require_once __DIR__ . '/../bootstrap.php';
 
 use Doctrine\ORM\EntityManagerInterface;
 
-$container->add(EntityManagerInterface::class,$entityManager)->addTag('doctrine.orm');
+$container->add(EntityManagerInterface::class, $entityManager)->addTag('doctrine.orm');

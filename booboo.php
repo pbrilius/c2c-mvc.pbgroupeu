@@ -17,6 +17,7 @@ $json->setErrorLimit(E_ERROR | E_WARNING | E_NOTICE | E_USER_ERROR
 
 $booboo->pushFormatter($null);
 $booboo->pushFormatter($html);
+$booboo->pushFormatter($json);
 
 $booboo->register([
   new LogHandler($container->get(Logger::class))

@@ -42,7 +42,7 @@ $userProvidedValues = [
         'enabled' => (bool) $_SERVER['DEBUG'],
     ],
     'doctrine' => [
-      'proxy' => $_ENV['PROXY'],
+      'proxy' => __DIR__ . '/../' .  $_ENV['PROXY'],
     ],
 ];
 

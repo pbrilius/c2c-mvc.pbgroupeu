@@ -14,7 +14,8 @@
         "symfony/cache": "5.4.x-dev",
         "vlucas/phpdotenv": "5.3.x-dev",
         "laminas/laminas-diactoros": "2.7.x-dev",
-        "laminas/laminas-httphandlerrunner": "2.1.x-dev"
+        "laminas/laminas-httphandlerrunner": "2.1.x-dev",
+        "monolog/monolog": "2.x-dev"
     },
     "require-dev": {
         "phpunit/phpunit": "9.5.x-dev"

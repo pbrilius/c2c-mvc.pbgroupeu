@@ -3,7 +3,7 @@
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-$router->map('GET', '/', function (ServerRequestInterface $request) use ($container, $eniac): ResponseInterface {
+$router->map('GET', '/index.php', function (ServerRequestInterface $request) use ($container, $eniac): ResponseInterface {
 
     $templates = $container->get('engine')[0];
     $template = $templates->make('user::index');

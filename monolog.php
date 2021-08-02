@@ -7,4 +7,4 @@ use Monolog\Handler\StreamHandler;
 $logger = new Logger('Web app');
 $logger->pushHandler(new StreamHandler($eniac->get('logging.path')
   . '/'
-  . $eniac->get('logging.file'), Logger::NOTICE));
+  . $eniac->get('logging.file'), Logger::INFO));

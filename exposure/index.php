@@ -18,6 +18,26 @@ include_once __DIR__ . '/../routes/api.php';
 
 $logger = $container->get('logger')[0];
 $logger->notice('Dispatching request');
+
+use League\Uri\Http;
+use League\Uri\UriString;
+
+define('DNS', 80);
+$uri = Http::createFromString($request->getUri()->getScheme()
+  . '://'
+  . $request->getUri()->getHost()
+  . ($request->getUri()->getPort() === DNS ? '' : ':' .$request->getUri()->getPort())
+  . $request->getUri()->getPath()
+);
+
+$uriParsed = UriString::parse((string) $uri);
+$uriParsed['path'] = str_replace('index.php/', '', $uriParsed['path']);
+$builtUpUrl = UriString::build($uriParsed);
+
+$logger->info('Global call to possible VHOST HTTPD on Open Source Foundation', [
+  'URL' => (string) $builtUpUrl
+]);
+
 $response = $router->dispatch($request);
 $logger->warning('Emitting response');
 

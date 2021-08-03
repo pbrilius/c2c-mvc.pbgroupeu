@@ -16,4 +16,4 @@ $container->add(Logger::class, $logger)->addTag('logger');
 
 include_once __DIR__ . '/../engine.php';
 use League\Templates\Engine;
-$container->add(Engine::class, $templates)->addTag('engine');
+$container->add(Engine::class, $plates)->addTag('engine');

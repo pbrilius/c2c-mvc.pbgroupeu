@@ -1,10 +1,12 @@
 <?php
-// Create new Plates engine
-$templates = new League\Plates\Engine(__DIR__ . '/templates/');
 
-$templates->addfolder('admin', __DIR__ . '/templates/admin');
-$templates->addfolder('shared', __DIR__ . '/templates/shared');
-$templates->addfolder('user', __DIR__ . '/templates/user');
+use League\Plates\{Engine, Template\Theme};
+
+$plates = Engine::fromTheme(Theme::hierarchy([
+    Theme::new(__DIR__ . '/templates/main', 'Main'), // parent
+    Theme::new(__DIR__ . '/templates/user', 'User'), // child
+    Theme::new(__DIR__ . '/templates/administration', 'Administration'), // child2
+]));
 
 // Load any additional extensions
-$templates->loadExtension(new League\Plates\Extension\Asset(__DIR__ . '/exposure/'));
+$plates->loadExtension(new League\Plates\Extension\Asset(__DIR__ . '/exposure/'));

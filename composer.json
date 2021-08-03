@@ -7,7 +7,7 @@
         "league/container": "@stable",
         "league/booboo": "@stable",
         "league/config": "@stable",
-        "league/plates": "@stable",
+        "league/plates": "3.*",
         "league/route": "@stable",
         "league/uri": "^6.0",
         "league/uri-components": "2.x-dev",

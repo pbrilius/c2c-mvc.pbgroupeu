@@ -11,3 +11,10 @@ mkdir log
 touch log/app.log
 chmod o+rw -R log
 ```
+
+Proxies:
+
+```shell
+mkdir proxy
+chmod o+rw proxy
+```

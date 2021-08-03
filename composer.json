@@ -20,7 +20,7 @@
     "require-dev": {
         "phpunit/phpunit": "9.5.x-dev"
     },
-    "license": "EULA",
+    "license": "APSL-1.1",
     "autoload": {
         "psr-4": {
             "Pbrilius\\C2cMvcPbgroupeu\\": "src/"

@@ -7,6 +7,7 @@ Intended for _commercial_ use for enterprise sccale projects, so called **Friedm
 ## Installation & set up
 
 ```shell
+mkdir log
 touch log/app.log
 chmod o+rw -R log
 ```
